@@ -7,7 +7,7 @@ style.innerText = `html, .loading-screen.ng-scope, .history-entries, .history-la
     background-color: #e4e8ed;
 }
 
-.ace_editor, .pdf-viewer, .pdfjs-controls, .project-list-main, .project-list-main .fa-circle, .site-footer, #review-panel, .modal-content, #left-menu, .history-entry-day, .loading-panel, #editor-rich-text {
+.cm-editor, .ace_editor, .pdf-viewer, .pdfjs-controls, .project-list-main, .project-list-main .fa-circle, .site-footer, #review-panel, .modal-content, #left-menu, .history-entry-day, .loading-panel, #editor-rich-text {
     filter: invert(100%);
     -webkit-filter: invert(100%);
 }
