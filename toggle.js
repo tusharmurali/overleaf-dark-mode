@@ -7,36 +7,14 @@ style.innerText = `html, .loading-screen.ng-scope, .history-entries, .history-la
     background-color: #e4e8ed;
 }
 
-.cm-editor,
-.cm-panels-top,
-.popover,
-.pdf-viewer,   
-.site-footer,   
-.history-react,
-.modal, 
-.dropdown-menu,  
-.project-list-main-react,
-.project-list-main-react .fa-circle,
-.loading-panel,
-.loading-screen {
-    filter: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg">\
-      <filter id="invert" color-interpolation-filters="linearRGB">\
-        <feColorMatrix in="SourceGraphic" type="matrix"\
-          values="-0.98701696766 0 0 0 1\
-            0 -0.98701696766 0 0 1\
-            0 0 -0.98701696766 0 1\
-            0 0 0 1 0" />\
-      </filter>\
-    </svg>#invert');
+.cm-editor, .ace_editor, .pdf-viewer, .pdfjs-controls, .project-list-main, .project-list-main .fa-circle, .site-footer, #review-panel, .modal-content, #left-menu, .history-entry-day, .loading-panel, #editor-rich-text {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
 }
 
-// TODO: fix cm-gutters (line numbers), history panel, and ide-react-panel (backgrounds when resizing)
-
-.project-list-main-react {
-    background-color: #f4f5f6;
+.project-list-main {
+    background-color: #f4f5f8;
 }`
-
-// -webkit-filter: invert(100%);
 
 chrome.storage.sync.get(['darkMode'], function(result) {
     if (result.darkMode) document.body.appendChild(style)
