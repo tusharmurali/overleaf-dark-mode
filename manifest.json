@@ -15,7 +15,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://*.overleaf.com/project/*"],
+            "matches": ["https://*.overleaf.com/*"],
             "js": ["toggle.js"]
         }
     ],
