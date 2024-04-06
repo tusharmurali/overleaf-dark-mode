@@ -46,9 +46,9 @@ footer,
     filter: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg">\
       <filter id="invert" color-interpolation-filters="linearRGB">\
         <feColorMatrix in="SourceGraphic" type="matrix"\
-          values="-0.98701696766 0 0 0 1\
-            0 -0.98701696766 0 0 1\
-            0 0 -0.98701696766 0 1\
+          values="-0.999 0 0 0 1\
+            0 -0.999 0 0 1\
+            0 0 -0.999 0 1\
             0 0 0 1 0" />\
       </filter>\
     </svg>#invert');
@@ -62,7 +62,7 @@ footer,
     border-bottom: 1px solid #222 !important;
 }
 
-.project-list-main-react, .cm-activeLineGutter {
+.project-list-main-react, .cm-activeLineGutter, .pdf-viewer {
     background-color: #f4f5f6 !important;
 }
 
