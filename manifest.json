@@ -1,7 +1,7 @@
 {
     "name": "Overleaf Dark Mode",
     "description": "A dark mode for the online LaTeX editor Overleaf.",
-    "version": "1.6",
+    "version": "1.7",
     "manifest_version": 3,
     "icons": {
         "48": "img/icon48.png",
