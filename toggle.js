@@ -4,30 +4,34 @@ style.innerText = `html, .loading-screen.ng-scope, .history-entries, .history-la
 }
 
 .pdf-viewer {
-    background-color: #e4e8ed;
+    background-color: #ede9e4;
 }
 
 /* 
+Previously used, now unused:
+${location.href.endsWith("overleaf.com/") || location.href.endsWith("overleaf.com") ? "" : ".navbar, .navbar .dropdown-menu,"},
+footer,
 .cm-editor,
 .cm-panels-top,
 .pdf-viewer,
 .project-list-main-react,
 .material-symbols,
+.synctex-controls,
 .toolbar,
 .toolbar-pdf .dropdown-menu,
 div[role="separator"],
 .ide-react-editor-sidebar,
 .site-footer,
+.loading
 */
 
 body,
-${location.href.endsWith("overleaf.com/") || location.href.endsWith("overleaf.com") ? "" : ".navbar, .navbar .dropdown-menu,"}
-footer,
 .popover,
+[data-owner=writefull],
+.toolbar-editor,
 .tooltip,
 .pdf,
 .pdf-viewer,
-.cm-panels-top,
 .toolbar-header,
 .ide-react-editor-sidebar,
 .history-react,
@@ -35,39 +39,32 @@ footer,
 .modal-backdrop,
 .project-list-sidebar-wrapper-react,
 .project-list-main-react .fa-circle,
-.synctex-controls,
 .custom-toggler,
+.horizontal-resize-handle,
 .doc-container,
 .tag-dot,
 .color-picker-item,
-.loading,
 .history-version-list-container,
 .chat {
-    filter: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg">\
-      <filter id="invert" color-interpolation-filters="linearRGB">\
-        <feColorMatrix in="SourceGraphic" type="matrix"\
-          values="-0.999 0 0 0 1\
-            0 -0.999 0 0 1\
-            0 0 -0.999 0 1\
-            0 0 0 1 0" />\
-      </filter>\
-    </svg>#invert');
+    filter: invert(0.999) hue-rotate(180deg);
 }
+
+/* Previously used, now unused:
+.cm-panels-top {
+    border-bottom: 1px solid #222 !important;
+} */
 
 .cm-gutters {
     background-color: transparent !important;
 }
 
-.cm-panels-top {
-    border-bottom: 1px solid #222 !important;
-}
-
 .project-list-main-react, .cm-activeLineGutter, .pdf-viewer {
-    background-color: #f4f5f6 !important;
+    background-color: #f6f5f4 !important;
 }
 
 .horizontal-resize-handle {
-    background-color: #fcfaf7;
+    /* background-color: #f7f9fc; */
+    z-index: 1;
 }
 
 .doc-container .loading {
@@ -84,7 +81,7 @@ footer,
 }
 
 ::selection, .ͼe.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .ͼe .cm-selectionBackground, .ͼe .cm-content ::selection, .ͼe .cm-searchMatch.cm-searchMatch.cm-searchMatch-selected {
-    background-color: rgba(181, 213, 255, 0.3);
+    background-color: rgba(255, 223, 181, 0.3);
 }`
 
 chrome.storage.sync.get(['darkMode'], function(result) {
