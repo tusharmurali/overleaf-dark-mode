@@ -27,7 +27,6 @@ div[role="separator"],
 
 body,
 .popover,
-[data-owner=writefull],
 .toolbar-editor,
 .tooltip,
 .pdf,
