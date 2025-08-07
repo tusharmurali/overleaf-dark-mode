@@ -49,10 +49,9 @@ body,
     filter: invert(0.999) hue-rotate(180deg);
 }
 
-/* Previously used, now unused:
 .cm-panels-top {
-    border-bottom: 1px solid #222 !important;
-} */
+    border-bottom: 1px solid #ddd !important;
+}
 
 .cm-gutters {
     background-color: transparent !important;
@@ -80,9 +79,10 @@ body,
     background: rgba(0, 0, 0, 0.02) !important;
 }
 
+/*
 ::selection, .ͼe.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .ͼe .cm-selectionBackground, .ͼe .cm-content ::selection, .ͼe .cm-searchMatch.cm-searchMatch.cm-searchMatch-selected {
-    background-color: rgba(255, 223, 181, 0.3);
-}`
+    background-color: rgba(255, 223, 181, 0.7);
+} */`
 
 chrome.storage.sync.get(['darkMode'], function(result) {
     if (result.darkMode) document.body.appendChild(style)
